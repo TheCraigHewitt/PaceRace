@@ -12,7 +12,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [Parse setApplicationId:@"E6LUKEvf85AitduCYaTNinDjkfcPMVhPYf2O1rbs"
+                  clientKey:@"JM2CYw8r05bMWWsIOBsV2zWk0Qwi8nl3bmsaVRqm"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    PFQueryTableViewController *controller = [[PFQueryTableViewController alloc] initWithClassName:@"User"];
+    
     return YES;
 }
 							
